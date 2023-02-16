@@ -236,3 +236,10 @@ aws sns subscribe \
  ### Creating A billing Alarm.
 
 #### A billing alarm is a service that will notify you by email when your aws account charges for the month have exceeded a monetary amount you have set. This is a tool to stay on-budget
+
+- Go to (IAM Users Console](https://us-east-1.console.aws.amazon.com/console/home?region=us-east-1) TOnero-admin 
+- click on the your username at the top of the management console and click on billing dashboard.
+- click on billing preference
+- click on set billing alarm 
+<img width="1440" alt="SCR-20230217-78" src="https://user-images.githubusercontent.com/112965272/219508656-a2e59bc0-cede-43af-8042-17b4e01983b3.png">
+
