@@ -126,7 +126,7 @@ vscode:
 
 #### The AWS Budget can be setup using the AWS management console, cloudshell and gitpod terminal
 
-1. step 1 : Create a Json file with the json Script below
+1. step 1 : Create a Json file with the json Script below called budgets.json
 
 ```json
 {
@@ -186,7 +186,7 @@ aws sns subscribe \
 
 Check your email and confirm the subscription
 
-3. Create the alarm script for the notification alert.
+3. Create the alarm script for the notification alert. called budget-notifications-with-subscribers.json
 
 ```json
 [
