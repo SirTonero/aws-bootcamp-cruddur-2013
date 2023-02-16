@@ -41,6 +41,38 @@
 
 <img width="986" alt="Screenshot 2023-02-16 at 01 43 37" src="https://user-images.githubusercontent.com/112965272/219228845-5b8fff3e-c7df-4da8-ad89-e4a7b5021184.png">
 
+### Create a new User and Generate AWS Credentials
+
+- Go to (IAM Users Console](https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/users) Anthony create a new user
+- `Enable console access` for the user
+- Create a new `Admin` Group and apply `AdministratorAccess`
+- Create the user and go find and click into the user
+- Click on `Security Credentials` and `Create Access Key`
+- Choose AWS CLI Access
+- Download the CSV with the credentials
+
+### Set Env Vars
+
+We will set these credentials for the current bash terminal
+```
+export AWS_ACCESS_KEY_ID=""
+export AWS_SECRET_ACCESS_KEY=""
+export AWS_DEFAULT_REGION=us-east-1
+```
+
+We'll tell Gitpod to remember these credentials if we relaunch our workspaces
+```
+gp env AWS_ACCESS_KEY_ID=""
+gp env AWS_SECRET_ACCESS_KEY=""
+gp env AWS_DEFAULT_REGION=us-east-1
+```
+
+### Check that the AWS CLI is working and you are the expected user
+
+```sh
+aws sts get-caller-identity
+```
+
 3. After installation is complete, debug logs are written to /var/log/install.log.
 
 To verify that the shell can find and run the aws command in your $PATH, use the following commands. 
