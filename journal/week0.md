@@ -9,6 +9,7 @@
 1. Recreate Logical Architectural Deisgn
 1. Conceptual Achitectural Diagram or Napkin Design
 1. Generating AWS Credentials
+1. create a Billing Alarm
 
 ----
 
