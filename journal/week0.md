@@ -24,8 +24,16 @@
 [My Cruddur Achitectural Diagram Remake](https://lucid.app/lucidchart/635a50ae-73c1-4bc4-aab4-655e4b626d24/edit?viewport_loc=-733%2C-1376%2C2879%2C1284%2C0_0&invitationId=inv_6c508643-34c4-4ca2-b0ec-d1b6acb1d313)
 
 
----
 
+---
+### My conceptual Diagram
+
+![Screenshot 2023-02-16 at 21 31 40](https://user-images.githubusercontent.com/112965272/219481491-a6090ef9-aa3e-434c-9f44-fe7eccec567b.png)
+
+### find the link to my conceptual diagram👇below
+
+[my Conceptual Diagram](https://lucid.app/lucidchart/64efb01c-d098-4665-8130-6710e7f27213/edit?viewport_loc=-354%2C106%2C3758%2C1676%2C0_0&invitationId=inv_5ce91669-2322-4bb7-919c-bbe4da4ec156)
+------
 ## Installation and Setup of AWS CLI
 
 #### The AWS Command Line Interface (AWS CLI) is a unified tool to manage your AWS services. With just one tool to download and configure, you can control multiple AWS services from the command line and automate them through scripts.
