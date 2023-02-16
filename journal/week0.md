@@ -240,6 +240,17 @@ aws sns subscribe \
 - Go to (IAM Users Console](https://us-east-1.console.aws.amazon.com/console/home?region=us-east-1) TOnero-admin 
 - click on the your username at the top of the management console and click on billing dashboard.
 - click on billing preference
-- click on set billing alarm 
-<img width="1440" alt="SCR-20230217-78" src="https://user-images.githubusercontent.com/112965272/219508656-a2e59bc0-cede-43af-8042-17b4e01983b3.png">
+- click on manage billing alarm 
+<img width="1249" alt="SCR-20230217-9j" src="https://user-images.githubusercontent.com/112965272/219508923-ab753cf5-091a-4481-9e93-cd6e9962b993.png">
+<img width="1438" alt="SCR-20230217-bx" src="https://user-images.githubusercontent.com/112965272/219509400-4a841927-a25f-483b-a21f-04b96e41334f.png">
+- click on metric and click on billing 
+- click on total estimated charge under billing.
+<img width="1241" alt="Screenshot 2023-02-17 at 00 22 18" src="https://user-images.githubusercontent.com/112965272/219510432-36ac64ee-1b00-4bb9-ac77-98a6ea8a6a9f.png">
+
+<img width="849" alt="Screenshot 2023-02-17 at 00 22 57" src="https://user-images.githubusercontent.com/112965272/219510578-29864674-40f0-405f-9d7a-a93b7d6f801d.png">
+- click next and assign an sns topic if you have any, or create one.
+- click on create alarm next.
+<img width="1438" alt="Screenshot 2023-02-17 at 00 26 13" src="https://user-images.githubusercontent.com/112965272/219510796-7d72f4dd-232c-4ab2-97b3-32bf77c955b1.png">
+
+
 
