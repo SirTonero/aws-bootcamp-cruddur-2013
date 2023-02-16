@@ -206,4 +206,11 @@ Check your email and confirm the subscription
     }
 ]
 ```
+4.in the cli type the command below and pass in those json script inside like the snippet below to create the aws budget
 
+```cli
+aws budgets create-budget \
+    --account-id $AWS_ACCOUNT_ID \
+    --budget file://aws/json/budget.json \
+    --notifications-with-subscribers file://aws/json/budget-notifications-with-subscribers.json
+```
