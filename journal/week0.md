@@ -34,7 +34,7 @@
 
 #### I took the following steps to install the AWS CLI by following the [Aws CLI Install Documentation Page](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
-1.Opened my terminal and type in the command `curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg" /`    The -o option specifies the file name that the downloaded package is written to. In this example, the file is written to AWSCLIV2.pkg in the current folder. <br>
+1.Opened my terminal and type in the command `curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg" /`  <br> <br> The -o option specifies the file name that the downloaded package is written to. In this example, the file is written to AWSCLIV2.pkg in the current folder. <br>
 
 2.install the download AWS cli pacgae by entering the command in my terminal `sudo installer -pkg AWSCLIV2.pkg -target`
 <br>
