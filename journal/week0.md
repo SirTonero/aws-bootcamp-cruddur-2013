@@ -206,7 +206,7 @@ Check your email and confirm the subscription
     }
 ]
 ```
-4.in the cli type the command below and pass in those json script inside like the snippet below to create the aws budget
+4. in the cli type the command below and pass in those json script inside like the snippet below to create the aws budget
 
 ```cli
 aws budgets create-budget \
@@ -214,3 +214,10 @@ aws budgets create-budget \
     --budget file://aws/json/budget.json \
     --notifications-with-subscribers file://aws/json/budget-notifications-with-subscribers.json
 ```
+5. type the following command to activate the alert of the sns service.
+```cli
+aws sns subscribe \
+    --topic-arn="arn:aws:sns:us-east-1:370485215308:billing_alarm" \
+    --protocol=email \
+    --notification-endpoint=tony.osunde02@gmail.com
+    ```
