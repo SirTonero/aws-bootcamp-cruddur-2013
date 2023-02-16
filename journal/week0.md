@@ -126,7 +126,7 @@ vscode:
 
 #### The AWS Budget can be setup using the AWS management console, cloudshell and gitpod terminal
 
-1. step 1 : Create a Json file with the json code below
+1. step 1 : Create a Json file with the json Script below
 
 ```json
 {
@@ -162,5 +162,48 @@ vscode:
 }
 ````
 
+2. ## Creating a Billing Alarm
 
+### Create SNS Topic
+
+- We need an SNS topic before we create an alarm.
+- The SNS topic is what will delivery us an alert when we get overbilled
+- [aws sns create-topic](https://docs.aws.amazon.com/cli/latest/reference/sns/create-topic.html)
+
+We'll create a SNS Topic
+```sh
+aws sns create-topic --name billing-alarm
+```
+which will return a TopicARN
+
+We'll create a subscription supply the TopicARN and our Email
+```sh
+aws sns subscribe \
+    --topic-arn TopicARN \
+    --protocol email \
+    --notification-endpoint your@email.com
+```
+
+Check your email and confirm the subscription
+
+3. Create the alarm script for the notification alert.
+
+```json
+[
+    {
+        "Notification": {
+            "ComparisonOperator": "GREATER_THAN",
+            "NotificationType": "ACTUAL",
+            "Threshold": 80,
+            "ThresholdType": "PERCENTAGE"
+        },
+        "Subscribers": [
+            {
+                "Address": "tony.osunde02@gmail.com",
+                "SubscriptionType": "EMAIL"
+            }
+        ]
+    }
+]
+```
 
