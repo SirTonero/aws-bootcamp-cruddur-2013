@@ -86,6 +86,13 @@ vscode:
 ![Screenshot 2023-02-16 at 03 00 14](https://user-images.githubusercontent.com/112965272/219249049-240d38f0-0b04-41d9-a3a9-1367cb3c508e.png)
 
 
+-------
+
+### Aws Budget <br>
+
+#### The AWS Budget service is another one I learned about this week. For cloud users, it is a very relevant service.<br> Using AWS budgets, you can set custom cost and usage thresholds and receive alerts when your thresholds are exceeded (or forecast to exceed). 
+
+#### The AWS Budget can be setup using the AWS management console 
 
 
 
