@@ -229,4 +229,10 @@ aws sns subscribe \
     --topic-arn="arn:aws:sns:us-east-1:370485215308:billing_alarm" \
     --protocol=email \
     --notification-endpoint=tony.osunde02@gmail.com
-    ```
+```
+
+-----------
+
+ ### Creating A billing Alarm.
+
+#### A billing alarm is a service that will notify you by email when your aws account charges for the month have exceeded a monetary amount you have set. This is a tool to stay on-budget
