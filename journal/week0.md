@@ -124,7 +124,43 @@ vscode:
 
 #### The AWS Budget service is another one I learned about this week. For cloud users, it is a very relevant service.<br> Using AWS budgets, you can set custom cost and usage thresholds and receive alerts when your thresholds are exceeded (or forecast to exceed). 
 
-#### The AWS Budget can be setup using the AWS management console 
+#### The AWS Budget can be setup using the AWS management console, cloudshell and gitpod terminal
+
+1. step 1 : Create a Json file with the json code below
+
+```json
+{
+    "BudgetLimit": {
+        "Amount": "10",
+        "Unit": "USD"
+    },
+    "BudgetName": "AWS_bootCamp",
+    "BudgetType": "COST",
+    "CostFilters": {
+        "TagKeyValue": [
+            "user:Key$value1",
+            "user:Key$value2"
+        ]
+    },
+    "CostTypes": {
+        "IncludeCredit": true,
+        "IncludeDiscount": true,
+        "IncludeOtherSubscription": true,
+        "IncludeRecurring": true,
+        "IncludeRefund": true,
+        "IncludeSubscription": true,
+        "IncludeSupport": true,
+        "IncludeTax": true,
+        "IncludeUpfront": true,
+        "UseBlended": false
+    },
+    "TimePeriod": {
+        "Start": 1477958399,
+        "End": 3706473600
+    },
+    "TimeUnit": "MONTHLY"
+}
+````
 
 
 
