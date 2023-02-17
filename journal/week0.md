@@ -178,7 +178,10 @@ vscode:
     "TimeUnit": "MONTHLY"
 }
 ````
+-------
+<img width="1215" alt="Screenshot 2023-02-17 at 23 17 26" src="https://user-images.githubusercontent.com/112965272/219804736-71de3dcc-3c22-4bee-90b2-6db45b4cd141.png">
 
+---------
 2. ## Creating a Billing Alarm
 
 ### Create SNS Topic
