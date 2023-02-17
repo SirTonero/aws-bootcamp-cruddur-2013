@@ -272,7 +272,9 @@ aws sns subscribe \
 ## Bonus extra work
 
 ####
-Since cruddur app is the next big thing to take over the micro blogging space, i decided to do a little mobile UI for it. please find a video below . Hope you like it.
+Since cruddur app is the next big thing to take over the micro blogging space, i decided to do a little mobile UI for it. please find a video below . Hope you like it. 
+
+[Figma cruddur Mobile UI](https://www.figma.com/proto/deMLIOT33KVMyrSXgIp9BF/Cruddur--Mobile?page-id=0%3A1&node-id=184%3A3&viewport=816%2C1016%2C0.72&scaling=scale-down&starting-point-node-id=184%3A4)
 
 https://user-images.githubusercontent.com/112965272/219794989-4f3ed589-92a4-4c89-b21a-fbb15d300a12.mp4
 
