@@ -179,6 +179,10 @@ vscode:
 }
 ````
 -------
+I created my own budget for $10 usd because that is the state amount budgetted for this bootcamp, should in case i use a service that is not covered in the free tier.
+
+I did not create a second budget, because i was concerned of udget spending going over the two budge free tier limit.
+
 <img width="1215" alt="Screenshot 2023-02-17 at 23 17 26" src="https://user-images.githubusercontent.com/112965272/219804736-71de3dcc-3c22-4bee-90b2-6db45b4cd141.png">
 
 ---------
