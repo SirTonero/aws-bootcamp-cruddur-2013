@@ -260,5 +260,14 @@ aws sns subscribe \
 - click on create alarm next.
 <img width="1438" alt="Screenshot 2023-02-17 at 00 26 13" src="https://user-images.githubusercontent.com/112965272/219510796-7d72f4dd-232c-4ab2-97b3-32bf77c955b1.png">
 
+---------
+
+## Bonus extra work
+
+####
+Since cruddur app is the next big thing to take over the micro blogging space, i decided to do a little mobile UI for it. please find a video below . Hope you like it.
+
+https://user-images.githubusercontent.com/112965272/219794989-4f3ed589-92a4-4c89-b21a-fbb15d300a12.mp4
+
 
 
