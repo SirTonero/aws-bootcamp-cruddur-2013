@@ -102,7 +102,8 @@ To verify that the shell can find and run the aws command in your $PATH, use the
 <br>
 `aws-cli/2.10.0 Python/3.9.11 Darwin/22.3.0 exe/x86_64 prompt/off `
 
-<img width="875" alt="Screenshot 2023-02-16 at 02 00 27" src="https://user-images.githubusercontent.com/112965272/219230995-371fe39a-c0b6-4313-85a2-9c67aa5a2d30.png">
+<img width="915" alt="Screenshot 2023-02-17 at 22 11 10" src="https://user-images.githubusercontent.com/112965272/219794312-5577389d-6ba0-45ed-bcc5-a04c16059a43.png">
+
 
 ### Gitpod Installation
 
