@@ -16,6 +16,7 @@ tasks:
       export FRONTEND_URL="*"
       cd /workspace/aws-bootcamp-cruddur-2023/frontend-react-js
       npm i
+      cd /workspace/aws-bootcamp-cruddur-2023/frontend-react-js
 vscode:
   extensions:
     - 42Crunch.vscode-openapi
