@@ -12,7 +12,6 @@ tasks:
     init: |
       cd /workspace/aws-bootcamp-cruddur-2023/backend-flask
       pip3 install -r requirements.txt
-      cd ..
       set BACKEND_URL="*"
       set FRONTEND_URL="*"
 vscode:
