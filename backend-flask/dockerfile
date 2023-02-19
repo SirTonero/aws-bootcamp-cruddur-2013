@@ -21,6 +21,9 @@ COPY . .
 # Set environment variables (Env Vars)
 #Inside the container and will remain set when the container is running
 ENV FLASK_ENV=development
+ENV BACKEND_URL="*"
+ENV FRONTEND_URL="*"
+
 
 EXPOSE ${PORT}
 
