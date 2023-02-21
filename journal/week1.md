@@ -110,6 +110,24 @@ unset FRONTEND_URL="*"
 unset BACKEND_URL="*"
 ```
 
+## Run the container in detach mode passing the `-d` flag
+
+```sh
+ docker container run --rm -p 4567:4567 -d backend-flask
+```
+
+## Get Container Images or Running Container Ids
+
+```sh
+docker images
+docker ps
+```
+## Get all containers bot running and stopped
+
+```sh
+docker ps -a
+```
+
 
 
 
