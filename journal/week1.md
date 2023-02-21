@@ -421,6 +421,21 @@ volumes:
  docker login
  ````
  <img width="966" alt="SCR-20230221-x6e" src="https://user-images.githubusercontent.com/112965272/220477493-e71ccd89-b987-422d-8d99-a7bc8d261d6c.png">
+ 
+ - i build the docker image to be pushed to my docker hub repository.
+<img width="960" alt="SCR-20230221-x34" src="https://user-images.githubusercontent.com/112965272/220477782-49ebb996-22d3-4a5e-8b9e-e3ebfed85f35.png">
+
+- then i tagged my image using the following commend 
+```sh
+docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+
+docker tag backend-flask:latest mrtonero007/aws-bootcamp-cruddur-2023:week.
+```
+
+<img width="1033" alt="SCR-20230222-o9" src="https://user-images.githubusercontent.com/112965272/220482308-1cefaed0-4c41-427d-9f67-cf6d7c5b5053.png">
+
+
+
 
 
  
