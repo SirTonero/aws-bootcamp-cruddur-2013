@@ -49,8 +49,16 @@ cd ..
 
 - open the link with our specified port of `4567` in my browser
 - append(to add to the end ) the url to `/api/activities/home`
-- and voila we got back a json page with data <br>
+- and voila we got back a json page with data 
+<br>
+
 ![SCR-20230221-ln0](https://user-images.githubusercontent.com/112965272/220374352-24d6150c-cca7-48ee-a9db-c2470cf22813.png)
+
+## Containerize our Backend-flask app
+
+- cd into the `backend-flask`
+- touch `dockerfile ` (no file extension is needed for a docker file)
+- or create the dockerfile here like this in the vscode explorer pane: `backend-flask/Dockerfile`
 
 
 
