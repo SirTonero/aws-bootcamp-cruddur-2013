@@ -21,7 +21,30 @@ Container images become containers at runtime and in the case of Docker containe
  
  clicking the git pod button quickly took us to the gitpod envirnment, the environment began by running the `gitpod.yml` file which contain all th build configuration for the enviroment .
  
+ -------
  
+ ## Containerized Backend Flask APP
+ 
+ ### Run python
+ -  i change directory into the backend-flask folder
+ -  exported the FRONTEND_URL and BACKEND_URL into our machine  ` The effect of not doing this means the backend wont connect to the front end `
+ -  install python3 with flask and set a host and a port to listen on .
+ 
+ ```sh
+ cd backend-flask
+export FRONTEND_URL="*"
+export BACKEND_URL="*"
+python3 -m flask run --host=0.0.0.0 --port=4567
+cd ..
+```
+
+### Output
+
+![SCR-20230221-l7p](https://user-images.githubusercontent.com/112965272/220369752-f9e3d50d-16ee-4341-9920-7fdf4b704e6c.png)
+
+
+- After running the above command we make shure we unlock the port inn the port tab.
+
  
 
  
