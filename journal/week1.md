@@ -204,6 +204,39 @@ docker rmi backend-flask
  ## Containerized Frontend
  
  
+ ## RUn NPM install
+ NPM Install is required before building the container because it needs to copy the node_modules folder
+ 
+ ```sh
+ cd frontend-react-js
+ npm i
+ ```
+ 
+ ### Create a Dockerfile
+ 
+ create a dockerfile in the `frontend-react-js` folder
+ `frontend-react-js/Dockerfile`
+ 
+ i inserted the following instructions into my dockerfile
+ 
+ ```dockerfile
+# This command pull an image from registry with nodejs 
+FROM node:16.18
+
+# here we are setting the PORT for the APP
+ENV PORT=3000
+
+# we are copying the contents of the frontend-react-js 
+COPY . /frontend-react-js
+WORKDIR /frontend-react-js
+RUN npm install
+EXPOSE ${PORT}
+CMD ["npm", "start"]
+ 
+ 
+ 
+ 
+ 
 
 
 
