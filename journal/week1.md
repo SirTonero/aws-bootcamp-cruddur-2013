@@ -434,6 +434,16 @@ docker tag backend-flask:latest mrtonero007/aws-bootcamp-cruddur-2023:week.
 
 <img width="1033" alt="SCR-20230222-o9" src="https://user-images.githubusercontent.com/112965272/220482308-1cefaed0-4c41-427d-9f67-cf6d7c5b5053.png">
 
+- i pushed the image using the command below
+```sh
+
+docker push [OPTIONS] NAME[:TAG]
+
+push mrtonero007/aws-bootcamp-cruddur-2023:week.1
+```
+
+
+
 
 
 
