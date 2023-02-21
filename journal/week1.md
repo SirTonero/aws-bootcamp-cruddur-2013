@@ -414,7 +414,14 @@ volumes:
  -  i created a repositiory to store my images
  ![SCR-20230221-wsd](https://user-images.githubusercontent.com/112965272/220474590-3ee77c47-12ff-4203-adbb-a279791a3795.png)
  
+ [my docker repositiory](https://hub.docker.com/repository/docker/mrtonero007/aws-bootcamp-cruddur-2023/general)
  
+ - head over to my terminal and  typed
+ ```sh
+ docker login
+ ````
+ <img width="966" alt="SCR-20230221-x6e" src="https://user-images.githubusercontent.com/112965272/220477493-e71ccd89-b987-422d-8d99-a7bc8d261d6c.png">
+
 
  
  
