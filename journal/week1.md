@@ -264,6 +264,58 @@ CMD ["npm", "start"]
 ![SCR-20230221-oyr](https://user-images.githubusercontent.com/112965272/220412531-e6cfe682-0728-4856-bf84-523fbbd2b520.png)
 
 
+## Multiple containers 
+
+Docker Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration. 
+
+## Create a docker-compose file 
+### create a `docker-compose.yml` at the root directory of my project `/aws-bootcamp-cruddur-2023`
+
+find below the docker-compose.yaml file which buillds our back end and frontend app together so they can connect .
+
+```yaml
+
+version: "3.8"
+services:
+  backend-flask:
+    environment:
+      FRONTEND_URL: "https://3000-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}"
+      BACKEND_URL: "https://4567-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}"
+    build: ./backend-flask
+    ports:
+      - "4567:4567"
+    volumes:
+      - ./backend-flask:/backend-flask
+  frontend-react-js:
+    environment:
+      REACT_APP_BACKEND_URL: "https://4567-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}"
+    build: ./frontend-react-js
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend-react-js:/frontend-react-js
+
+# the name flag is a hack to change the default prepend folder
+# name when outputting the image names
+networks: 
+  internal-network:
+    driver: bridge
+    name: cruddur
+```
+
+## Running the docker-compose.yml file
+
+Enter the command from From your project directory, start up your application by running
+
+```sh
+
+docker compose up
+
+```
+
+
+
+
 
  
  
