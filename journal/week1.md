@@ -242,7 +242,23 @@ EXPOSE ${PORT}
 CMD ["npm", "start"]
 
 ```
+ ## Build Container
  
+ ```sh
+ docker build -t frontend-react-js ./frontend-react-js
+ ```
+ 
+ ## Run Container
+ 
+ ```sh
+ docker run -p 3000:3000 -d frontend-react-js
+ ```
+ 
+
+- i made sure i opened the port using the steps found in the backend deployment 
+
+![SCR-20230221-ors](https://user-images.githubusercontent.com/112965272/220409072-ac0d3e06-68ad-4b8f-bd5b-d3dcf4d3201b.png)
+
  
  
  
