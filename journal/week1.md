@@ -128,6 +128,38 @@ docker ps
 docker ps -a
 ```
 
+## Check Container Logs
+```sh
+docker logs <container id> -f
+
+docker logs backend-flask -f
+
+## Check container Port
+
+```sh
+docker port <container id>
+```
+
+## passing a command into a running container
+
+```sh
+docker exec -it <container id> < example command > ps -aux
+```
+
+## Gaining shell access into a container 
+
+```sh
+
+docker exec -it <container id> sh 
+```
+
+## Delete a container
+
+```sh
+docker rm <container id
+```
+
+## Deleting an image
 
 
 
