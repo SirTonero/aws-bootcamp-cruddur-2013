@@ -60,6 +60,44 @@ cd ..
 - touch `dockerfile ` (no file extension is needed for a docker file)
 - or create the dockerfile here like this in the vscode explorer pane: `backend-flask/Dockerfile`
 
+```dockerfile
+ # Pulling this image from docker hub useing the FROM Command 
+FROM python:3.10-slim-buster
+
+# Inside Container
+# MAke a new container inside container
+WORKDIR /backend-flask
+
+# Outside Container -> inside Container
+# this containers the library we want to install to run the app
+COPY requirements.txt requirements.txt
+
+# Inside Container
+#install the python libraries used for the app
+RUN pip3 install -r requirements.txt
+
+# Outside Container -> inside Container
+# . means everything the current directory
+# the first . - /backend-flask (outside container)
+# the scond period ./backend-lask (inside container)
+COPY . .
+
+# Set environment variables (Env Vars)
+#Inside the container and will remain set when the container is running
+ENV FLASK_ENV=development
+ENV BACKEND_URL="*"
+ENV FRONTEND_URL="*"
+
+# Expose a port to listen to
+EXPOSE ${PORT}
+
+# CMD (command)
+# python3 -m flask run --host=0.0.0.0 --port=4567
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]
+
+```
+
+
 
 
 
