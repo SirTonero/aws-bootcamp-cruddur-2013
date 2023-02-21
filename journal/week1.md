@@ -43,9 +43,20 @@ cd ..
 ![SCR-20230221-l7p](https://user-images.githubusercontent.com/112965272/220369752-f9e3d50d-16ee-4341-9920-7fdf4b704e6c.png)
 
 
-- After running the above command we make shure we unlock the port inn the port tab.👇 <br>
+- After running the above command we make sure we unlock the port in the port tab.👇 <br>
 
 ![Opening ports on vscode](https://user-images.githubusercontent.com/112965272/220370600-dfadcdbb-daea-44ce-85d7-26d9dbc9545d.png)
+
+- open the link with our specified port of `4567` in my browser
+- append(to add to the end ) the url to `/api/activities/home`
+- and voila we got back a json page with data <br>
+![SCR-20230221-ln0](https://user-images.githubusercontent.com/112965272/220374352-24d6150c-cca7-48ee-a9db-c2470cf22813.png)
+
+
+
+
+
+
 
 
  
