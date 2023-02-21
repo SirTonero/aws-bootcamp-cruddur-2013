@@ -407,7 +407,15 @@ volumes:
 - Launch an EC2 instance that has docker installed, and pull a container to demonstrate you can run your own docker processes. 
 
 
+ ## Push and tag an image to docker HUb
  
+ - i went to [docker hub website](https://hub.docker.com/)
+ -  Created a free-tier account and verified my email addresss as well as chose a unique USername `Mrtonero`
+ -  i created a repositiory to store my images
+ ![SCR-20230221-wsd](https://user-images.githubusercontent.com/112965272/220474590-3ee77c47-12ff-4203-adbb-a279791a3795.png)
+ 
+ 
+
  
  
  
