@@ -259,6 +259,11 @@ CMD ["npm", "start"]
 
 ![SCR-20230221-ors](https://user-images.githubusercontent.com/112965272/220409072-ac0d3e06-68ad-4b8f-bd5b-d3dcf4d3201b.png)
 
+
+### We have our frontend-react-js App running (without data)
+
+
+
  
  
  
