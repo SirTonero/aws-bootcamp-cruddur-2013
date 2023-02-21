@@ -226,12 +226,22 @@ FROM node:16.18
 # here we are setting the PORT for the APP
 ENV PORT=3000
 
-# we are copying the contents of the frontend-react-js 
+# we are copying the contents of the frontend-react-js into a created folder in the container call frontend-react-js
 COPY . /frontend-react-js
+
+# change the working directory to /frontend-react-js
 WORKDIR /frontend-react-js
+
+# The RUN Command install npm on the machine
 RUN npm install
+
+# exposes a port
 EXPOSE ${PORT}
+
+## cmd command here starts the NPM service
 CMD ["npm", "start"]
+
+```
  
  
  
