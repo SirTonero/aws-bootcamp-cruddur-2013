@@ -21,6 +21,42 @@ Container images become containers at runtime and in the case of Docker containe
  
  clicking the git pod button quickly took us to the gitpod envirnment, the environment began by running the `gitpod.yml` file which contain all th build configuration for the enviroment .
  
+ - i updated my `gitpod.yml file` to get my environment ready with all the prerequisite installations
+ 
+ find yaml below👇
+ 
+ ```yaml
+ tasks:
+  - name: aws-cli
+    env:
+      AWS_CLI_AUTO_PROMPT: on-partial
+    init: |
+      cd /workspace
+      curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+      unzip awscliv2.zip
+      sudo ./aws/install
+      cd $THEIA_WORKSPACE_ROOT
+  - name: postgress
+    init: |
+      curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
+      echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
+      sudo apt update
+      sudo apt install -y postgresql-client-13 libpq-dev
+  - name: initialise Frontend and Backend
+    init: |
+      cd /workspace/aws-bootcamp-cruddur-2023/backend-flask
+      pip3 install -r requirements.txt
+      export BACKEND_URL="*"
+      export FRONTEND_URL="*"
+      cd /workspace/aws-bootcamp-cruddur-2023/frontend-react-js
+      npm i
+      cd /workspace/aws-bootcamp-cruddur-2023/frontend-react-js
+vscode:
+  extensions:
+    - 42Crunch.vscode-openapi
+    - cweijan.vscode-postgresql-client2
+```
+ 
  -------
  
  ## Containerized Backend Flask APP
@@ -156,10 +192,18 @@ docker exec -it <container id> sh
 ## Delete a container
 
 ```sh
-docker rm <container id
+docker rm <container id>
 ```
 
 ## Deleting an image
+```sh
+docker rmi <image-name>
+docker rmi backend-flask
+
+```
+ ## Containerized Frontend
+ 
+ 
 
 
 
