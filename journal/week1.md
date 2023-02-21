@@ -43,7 +43,10 @@ cd ..
 ![SCR-20230221-l7p](https://user-images.githubusercontent.com/112965272/220369752-f9e3d50d-16ee-4341-9920-7fdf4b704e6c.png)
 
 
-- After running the above command we make shure we unlock the port inn the port tab.
+- After running the above command we make shure we unlock the port inn the port tab.👇 <br>
+
+![Opening ports on vscode](https://user-images.githubusercontent.com/112965272/220370600-dfadcdbb-daea-44ce-85d7-26d9dbc9545d.png)
+
 
  
 
