@@ -15,4 +15,15 @@ Container images become containers at runtime and in the case of Docker containe
 ## Technical Task for Week 1 - Containerization
 
 - ## create a github Repo
+ The first tasked was to create a github repo of the AWS-Bootcamp-cruddur-2023 repo which container
+ the backend and front apps folder that we would be working with.
+ ![cruddur app repo](https://user-images.githubusercontent.com/112965272/220357778-c446591c-fc61-4d16-8a84-aa00c6b126ec.png)
+ 
+ clicking the git pod button quickly took us to the gitpod envirnment, the environment began by running the `gitpod.yml` file which contain all th build configuration for the enviroment .
+ 
+ 
+ 
+
+ 
+
 
