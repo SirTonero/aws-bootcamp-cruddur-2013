@@ -450,6 +450,12 @@ push mrtonero007/aws-bootcamp-cruddur-2023:week.1
 
 [Link to my image in docker hub](https://hub.docker.com/layers/mrtonero007/aws-bootcamp-cruddur-2023/week.1/images/sha256-5fdfadcb994ed1e0821c354e6b44320fd594dc97a9a68be775db087d69cc1f05?context=repo)
 
+- then i signed out of docker using 
+```sh
+docker logout
+```
+<img width="883" alt="SCR-20230222-1gb" src="https://user-images.githubusercontent.com/112965272/220486573-07a6c315-9ad9-4048-a655-08870f46ca24.png">
+
 
 
 
