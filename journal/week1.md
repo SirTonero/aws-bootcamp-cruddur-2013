@@ -456,6 +456,21 @@ docker logout
 ```
 <img width="883" alt="SCR-20230222-1gb" src="https://user-images.githubusercontent.com/112965272/220486573-07a6c315-9ad9-4048-a655-08870f46ca24.png">
 
+## Using multi-stage building for a Dockerfile build
+
+What is multi-stage build?
+
+With multi-stage builds, you use multiple `FROM` statements in your Dockerfile. Each `FROM` instruction can use a different base, and each of them begins a new stage of the build. You can selectively copy artifacts from one stage to another, leaving behind everything you don't want in the final image.
+
+Some Docker keyword in a multi stage build are :
+
+- `AS` = This is used to name the first image in the first `FROM` statement in our dockerfile
+- `COPY --from=build <source image> <destination image> `
+
+in this challenge i recreated the Frontend cruddur react app to use a multi stage build in the docker file.
+
+Please find the code below👇
+
 
 
 
