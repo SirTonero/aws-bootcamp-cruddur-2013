@@ -442,7 +442,13 @@ docker push [OPTIONS] NAME[:TAG]
 push mrtonero007/aws-bootcamp-cruddur-2023:week.1
 ```
 
+<img width="1027" alt="SCR-20230222-10u" src="https://user-images.githubusercontent.com/112965272/220485469-dee50263-8a5f-4e15-adb0-583ae230cdd9.png">
+      
+![SCR-20230222-zx](https://user-images.githubusercontent.com/112965272/220485545-e1efee1a-331e-4b55-b779-e521374e6937.png)
 
+👇
+
+[Link to my image in docker hub](https://hub.docker.com/layers/mrtonero007/aws-bootcamp-cruddur-2023/week.1/images/sha256-5fdfadcb994ed1e0821c354e6b44320fd594dc97a9a68be775db087d69cc1f05?context=repo)
 
 
 
