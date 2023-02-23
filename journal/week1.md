@@ -580,6 +580,46 @@ Another method to achieve this is to pass this command into the terminal
 docker run --name react -d -p 3000:3000 reactapp npm start
 ```
 
+## Implement a healthcheck in the V3 Docker compose file
+
+What is a docker health Check ?
+
+
+The `HEALTHCHECK` directive tells Docker how to determine if the state of the container is normal. This was a new directive introduced during Docker 1.12. Before the HEALTHCHECK directive, the Docker engine can only determine if the container is in a state of abnormality by whether the main process in the container exits. In many cases, this is fine, but if the program enters a deadlock state, or an infinite loop state, the application process does not exit, but the container is no longer able to provide services.
+
+
+The syntax look like:
+```sh
+HEALTHCHECK [options] CMD <command>:
+```
+
+The above syntax set the command to check the health of the container.
+
+
+### How does it work?
+When a `HEALTHCHECK `instruction is specified in an image, the container is started with it, the initial state will be starting, and will become healthy after the HEALTHCHECK instruction is checked successfully. If it fails for a certain number of times, it will become unhealthy.
+
+i implemented the the health check on the docker compose file by passing the healtcheck column with it properties 
+
+```docker-compose.yml
+healthcheck:
+      ## The parameter which the test will be based on
+      test: ["executable", "arg"]
+      
+      ## the time in between each test
+      interval: 1m30s
+      
+      ##time to rule the container healthy or unhealthy
+      timeout: 30s
+      
+      #number of times the healthcheck will retry
+      retries: 5
+      ## The wait time for container to initialize before the check starts
+      start_period: 30s
+      
+```
+      
+      
 
 
 
