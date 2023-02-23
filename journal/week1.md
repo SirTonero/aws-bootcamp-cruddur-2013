@@ -705,6 +705,17 @@ volumes:
 
 ![SCR-20230224-ql](https://user-images.githubusercontent.com/112965272/221055576-771cab11-92d5-4880-a252-31cb9dcc8421.png)
 
+
+## HealthCheck for frontend-react-js app
+
+![SCR-20230224-z2](https://user-images.githubusercontent.com/112965272/221056531-8affdca8-15aa-4a5e-8215-526108da72eb.png)
+
+
+## HealthCheck for Postgres Database
+
+![SCR-20230224-12z](https://user-images.githubusercontent.com/112965272/221057604-9a071914-aa65-4dcc-872c-c2d5fb393199.png)
+
+
   
       
 
