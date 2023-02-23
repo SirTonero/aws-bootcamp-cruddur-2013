@@ -614,11 +614,98 @@ healthcheck:
       
       #number of times the healthcheck will retry
       retries: 5
+      
       ## The wait time for container to initialize before the check starts
       start_period: 30s
       
 ```
-      
+  With the above synthax i was able to implement a `healthcheck` on the docker-compose file for the `cruddur app`👇
+  
+  ```yaml
+  
+  version: "3.8"
+services:
+  backend-flask:
+    environment:
+      FRONTEND_URL: "http://localhost:3000"
+      BACKEND_URL: "http://localhost:4567"
+    build: ./backend-flask
+    ports:
+      - "4567:4567"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4567/api/activities/home"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    volumes:
+      - ./backend-flask:/backend-flask
+  frontend-react-js:
+    environment:
+      REACT_APP_BACKEND_URL: "http://localhost:4567"
+    build: ./frontend-react-js
+    depends_on:
+      backend-flask: 
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    volumes:
+      - ./frontend-react-js:/frontend-react-js
+  dynamodb-local:
+    # https://stackoverflow.com/questions/67533058/persist-local-dynamodb-data-in-volumes-lack-permission-unable-to-open-databa
+    # We needed to add user:root to get this working.
+    user: root
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
+    image: "amazon/dynamodb-local:latest"
+    container_name: dynamodb-local
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./docker/dynamodb:/home/dynamodblocal/data"
+    working_dir: /home/dynamodblocal
+
+  db:
+    image: postgres:13-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    ports:
+      - '5432:5432'
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
+    volumes: 
+      - db:/var/lib/postgresql/data
+
+# the name flag is a hack to change the default prepend folder
+# name when outputting the image names
+networks: 
+  internal-network:
+    driver: bridge
+    name: cruddur
+
+volumes:
+  db:
+    driver: local
+    
+```
+  
+  
+## HealthCheck for backend-flask
+
+![SCR-20230224-ql](https://user-images.githubusercontent.com/112965272/221055576-771cab11-92d5-4880-a252-31cb9dcc8421.png)
+
+  
       
 
 
