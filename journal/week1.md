@@ -519,6 +519,30 @@ Using the image below , notice my multi build image of the same application is s
 
 <img width="1127" alt="SCR-20230223-1dt" src="https://user-images.githubusercontent.com/112965272/220792367-39423686-d81b-4d32-81f5-b362d2f3c243.png">
 
+## Run the dockerfile CMD as an external script
+
+What is the `CMD` command in the dockerfile?
+
+When building a Dockerfile, the CMD instruction specifies the default program that will execute once the container runs.
+
+`CMD` Sets default parameters that can be overridden from the Docker Command Line Interface (CLI) when a container is running.
+
+### Steps to Running CMD as an external script in a Dockerfile
+
+- Create a shell script in the same folder as your dockerfile
+- write the CMD command inside the shell script .sh file
+- give permission to the shell script using `chmod x+`
+- Call the shell script inside the dockerfile in the CMD line
+
+i Used the dockerfile for the frontend-react as an example to demostrate this homework challenge.
+
+shell script to initialise npm in the dockerfile in /frontend-react-js folder 
+
+```sh
+#!/bin/bash
+npm start
+```
+now calling the  shell script inside the docker file 
 
 
 
