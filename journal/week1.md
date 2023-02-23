@@ -507,6 +507,19 @@ CMD ["npm", "start"]
 
 After the build process is complete, image1 `(node:19.7-slim)` is discarded and image2  `(node:16.18)` is finalized .
 
+What Multi-Stage Builds Can Be Good For
+- Reduce Redundant Build Effort. ...
+- Make Intermediate Image Layers Shareable. ...
+- Keep Final Images Small And Dockerfiles Readable. ...
+- Keep Your Secrets Safe. ...
+- Simplify Your Image Stages Internally. ...
+- Notice You Might Have Deeper Lying Problems.
+
+Using the image below , notice my multi build image of the same application is smaller in size compare to the non multi build image.
+
+<img width="1127" alt="SCR-20230223-1dt" src="https://user-images.githubusercontent.com/112965272/220792367-39423686-d81b-4d32-81f5-b362d2f3c243.png">
+
+
 
 
 
