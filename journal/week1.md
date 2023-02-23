@@ -538,6 +538,9 @@ i Used the dockerfile for the frontend-react as an example to demostrate this ho
 
 shell script to initialise npm in the dockerfile in /frontend-react-js folder 
 
+![SCR-20230223-x1o](https://user-images.githubusercontent.com/112965272/221048206-7b96cd77-8531-480d-b457-7f60d9d39eb6.png)
+
+
 ```sh
 #!/bin/bash
 npm start
