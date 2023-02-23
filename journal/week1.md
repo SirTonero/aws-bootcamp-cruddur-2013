@@ -542,7 +542,41 @@ shell script to initialise npm in the dockerfile in /frontend-react-js folder
 #!/bin/bash
 npm start
 ```
-now calling the  shell script inside the docker file 
+now calling the  shell script inside the docker file will look like this 
+
+```dockerfile
+
+FROM node:16.18
+
+ENV PORT=3000
+
+COPY . /frontend-react-js
+
+## copy npm-start.sh from outside container to inside the container 
+COPY npm-start.sh npm-start.sh
+
+## giave permission to the file so it can be executed
+RUN chmod +x npm-start.sh
+
+WORKDIR /frontend-react-js
+
+RUN chown -R node:node /frontend-react-js
+USER node
+
+RUN npm install
+EXPOSE ${PORT}
+
+## Passing the script into the CMD to start npm
+CMD ["sh", "npm-start.sh"]
+
+```
+
+Another method to achieve this is to pass this command into the terminal 
+
+```Sh
+docker run --name react -d -p 3000:3000 reactapp npm start
+```
+
 
 
 
