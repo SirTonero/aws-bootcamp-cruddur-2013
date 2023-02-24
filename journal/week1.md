@@ -827,7 +827,33 @@ export BACKEND_URL='*'
 python3 -m flask run --host=0.0.0.0 --port=4567
 ```
 
-for the frontend i also 
+for the frontend i also installed npm on my system and 
+
+```sh
+npm start
+```
+
+now that my app works well time to build my container
+
+
+i first ran the `docker build` command i was prompted that docker command is not recognised.
+
+so i had to install docker desktop from [docker desktop download](https://www.docker.com/products/docker-desktop/)
+
+and started the docker engine
+
+
+- To test that docker was properly installed on my machine i typed in the following command
+
+```sh
+docker --version
+```
+-<img width="694" alt="SCR-20230224-tn8" src="https://user-images.githubusercontent.com/112965272/221283635-25196118-ad69-4e9b-a2b8-e56f9ef42fa1.png">
+
+
+
+
+
       
 
 
