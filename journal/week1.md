@@ -895,7 +895,17 @@ docker run --name frontend-reactapp -dp 3000:3000 frontend-react-js
 
 ## Issues Encountered 
 
-I kept getting 'not found' in my browser when running docker-compose.yaml on my local machine. After reading the entire compose file, I discovered something interesting.
+I kept getting 'not found' in my browser  when running docker-compose.yaml on my local machine the url just wont work when i click on it to open on a browser. After reading the entire compose file, I discovered something interesting.
+
+![SCR-20230224-ws3](https://user-images.githubusercontent.com/112965272/221310132-6af89426-cffa-4ee2-ac58-ddf118aaea2a.png)
+
+Both the frontend and backend urls point to gipod_workspace_id, which is an environmental variable passed to the CDES.
+
+Having edited the three lines that needed to point to my local host, my applications worked as expected.
+
+<img width="553" alt="SCR-20230224-x5r" src="https://user-images.githubusercontent.com/112965272/221314148-424127c7-4d24-4d58-9fa6-404ce3b295f8.png">
+
+
 
 
 
