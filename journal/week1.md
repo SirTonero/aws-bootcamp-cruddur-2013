@@ -800,8 +800,35 @@ docker exec -it reactapp sh
 
 
 i was able to implement 2 best practice to the dockerfile
-      
 
+## Install docker and run the container in my local machine.
+
+The Steps i took to get the container running are :
+
+i had to running it locally before trying the container.
+
+- i made a copy of my `aws-boocamp-cruddur-2023` repo to my local machine 
+- i opened the folder in my vscode
+- i used the terminal in vscode to cd into the my backend-flask directory and passed the command inside requirements.txt which are flask and python
+
+```sh
+pip3 install -r requirments.txt
+````
+- i also exported the ports to my machine 
+
+```sh 
+export FRONTEND_URL='*'
+export BACKEND_URL='*'
+```
+
+- i ran the following command to initialise my backend-fask and append api/activities/home to get data
+
+```sh
+python3 -m flask run --host=0.0.0.0 --port=4567
+```
+
+for the frontend i also 
+      
 
 
 
