@@ -725,7 +725,18 @@ docker compose ps
 
 ![SCR-20230224-1ik](https://user-images.githubusercontent.com/112965272/221059706-ea8d3b1a-0afd-40e8-bfc6-5119e3660a1b.png)
 
+## Research best practices of Dockerfiles and attempt to implement it in your Dockerfile
 
+
+Some of the best practices for creating a docker files are :
+
+- avoid running your container as a root user 
+- use multi-stage built as it allow you to drastically reduce the size of your final image, without struggling to reduce the number of intermediate layers and files. Because an image is built during the final stage of the build process, you can minimize image layers by leveraging build cache.
+
+- Don’t install unnecessary packages
+- Decouple Application
+- Minimize layers
+- give container read only access to outside directory or build directory
 
   
       
