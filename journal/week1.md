@@ -906,12 +906,48 @@ Having edited the three lines that needed to point to my local host, my applicat
 <img width="553" alt="SCR-20230224-x5r" src="https://user-images.githubusercontent.com/112965272/221314148-424127c7-4d24-4d58-9fa6-404ce3b295f8.png">
 
 
+## Pulling a docker images in an EC2 instance
+
+- login to aws mansgement console
+- search for EC2 in the search 
+- while in ec2 i create an instance named docker-ec2
+- and i logged into the instance using EC2 instance connect
+<img width="1257" alt="image" src="https://user-images.githubusercontent.com/112965272/221317274-43c885d7-dbd7-4b41-bc05-f3d1c6f0a5e4.png">
+
+<img width="1189" alt="image" src="https://user-images.githubusercontent.com/112965272/221317595-aeebf2b6-c432-4f90-b100-7b4278688fef.png">
+
+<img width="1356" alt="image" src="https://user-images.githubusercontent.com/112965272/221319686-019f9a8c-8591-4ea9-9e23-161bf13d2d9d.png">
 
 
+<img width="1209" alt="image" src="https://user-images.githubusercontent.com/112965272/221319833-b2e71da9-0ec2-48c9-9fb7-87ba698251e5.png">
+
+<img width="1363" alt="image" src="https://user-images.githubusercontent.com/112965272/221319944-2c7ebe11-dec9-44e7-840c-75f889ec35ef.png">
 
 
+- while inside my Ec2 Instance i install docker with the command 
 
-      
+```sh
+sudo yum install docker
+```
+
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/112965272/221320251-9070a819-9033-4e13-bd41-598c8691c209.png">
+
+- to check if docker has been installed i ran the command.
+
+```sh
+docker --version
+```
+<img width="1426" alt="image" src="https://user-images.githubusercontent.com/112965272/221320402-4ba77067-95c6-45eb-bc4f-327aa64367b1.png">
+
+to enable the docker service i enter 
+
+```sh
+sudo systemctl start docker.service
+```
+
+- now im going to pull my own image from docker hub into the ec2 instance 
+
+
 
 
 
