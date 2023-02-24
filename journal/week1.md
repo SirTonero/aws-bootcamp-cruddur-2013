@@ -945,7 +945,14 @@ to enable the docker service i enter
 sudo systemctl start docker.service
 ```
 
-- now im going to pull my own image from docker hub into the ec2 instance 
+- now im going to pull my own image from docker hub into the ec2 instance  `using docker pull`
+
+```sh
+docker pull mrtonero007/aws-bootcamp-cruddur-2023:clockappV1.2.3
+```
+
+<img width="1420" alt="image" src="https://user-images.githubusercontent.com/112965272/221321389-3e4d14d1-ca3c-4b0c-812f-85da17c6a4c2.png">
+
 
 
 
