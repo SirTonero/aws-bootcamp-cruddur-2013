@@ -893,8 +893,9 @@ docker run --name frontend-reactapp -dp 3000:3000 frontend-react-js
 ![SCR-20230224-wc2](https://user-images.githubusercontent.com/112965272/221304143-00906c72-b822-4640-b4e7-6fe02fb97382.png)
 
 
+## Issues Encountered 
 
-
+I kept getting 'not found' in my browser when running docker-compose.yaml on my local machine. After reading the entire compose file, I discovered something interesting.
 
 
 
