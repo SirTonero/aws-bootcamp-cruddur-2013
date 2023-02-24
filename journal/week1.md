@@ -738,6 +738,48 @@ Some of the best practices for creating a docker files are :
 - Minimize layers
 - give container read only access to outside directory or build directory
 
+
+for this Tasked i will be changing the docker image starting as root and also using multi stage build to address 2 security best practices
+
+```dockerfile
+
+## This is the first image created in the process named <build> so it can be referenced.
+FROM node:19.7-slim AS build
+
+## Here we are copying contents from our local machine to the container to a new directort /frontend-react-js  inside the container.
+COPY . /frontend-react-js
+
+## Change the working directory 
+WORKDIR /frontend-react-js
+
+## RUn NPM install inside the working directory above
+RUN npm install
+
+## create a new image from a different version of node
+FROM node:16.18
+
+## Expose a port for the container to listen on
+EXPOSE ${PORT}
+
+## copies the content of /frontend-react-js from the first image (node:19.7-slim) to a folder name /frontend-react-js in the second image(node:16.18) as well as all the files and dependencies gotten from running npm install .
+COPY --from=build /frontend-react-js /frontend-react-js
+
+## change the working directory to the directory needed to run our app
+WORKDIR /frontend-react-js
+
+## give the user none access to the frontend-react-js folder
+RUN chown -R node:node /frontend-react-js
+
+## Swithed user from root to node
+USER node
+
+## Health check to ping this url and return a value of healthy or unhealthy
+HEALTHCHECK CMD curl --fail http://localhost:3000/ || exit 1
+
+## execute this command to start npm
+CMD ["npm", "start"]
+```
+
   
       
 
