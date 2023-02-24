@@ -715,6 +715,17 @@ volumes:
 
 ![SCR-20230224-12z](https://user-images.githubusercontent.com/112965272/221057604-9a071914-aa65-4dcc-872c-c2d5fb393199.png)
 
+To view the status of the continer :
+
+```sh
+docker compose ps
+```
+
+## Output
+
+![SCR-20230224-1ik](https://user-images.githubusercontent.com/112965272/221059706-ea8d3b1a-0afd-40e8-bfc6-5119e3660a1b.png)
+
+
 
   
       
