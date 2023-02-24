@@ -865,6 +865,21 @@ docker run --name backend-flask -dp 4567:4567 backend-flask
 ```
 <img width="879" alt="SCR-20230224-unt" src="https://user-images.githubusercontent.com/112965272/221291765-e24ebdbf-1764-4e1e-8e13-72cd0752a811.png">
 
+## output
+
+![SCR-20230224-upw](https://user-images.githubusercontent.com/112965272/221292425-f154e557-7590-4528-b4e3-69d13a9abc03.png)
+
+## Frontend containerisation
+
+- i cd into my `frontend-react-js` directory and built my dockerfile in it 
+
+```sh
+docker build -t frontend-react-js . 
+```
+
+the period is me telling the command to look at my current directory for the dockerfile
+<img width="906" alt="SCR-20230224-v8n" src="https://user-images.githubusercontent.com/112965272/221297067-26a8e73d-0049-49cf-a50d-79f7df2b1bb2.png">
+
 
 
 
