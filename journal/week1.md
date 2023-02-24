@@ -794,7 +794,7 @@ then i used the following coomand to show attach shell to the container to run `
 docker exec -it reactapp sh
 ````
 
-## Outpot
+## Output
 
 ![SCR-20230224-2nw](https://user-images.githubusercontent.com/112965272/221066077-3250a214-645f-4676-a273-54b22a2cdcf0.png)
 
