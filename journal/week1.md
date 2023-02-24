@@ -780,7 +780,26 @@ HEALTHCHECK CMD curl --fail http://localhost:3000/ || exit 1
 CMD ["npm", "start"]
 ```
 
-  
+
+i built the dockerfile above using 
+
+```sh
+docker build -it reactapp ./frontend-react-js
+```
+
+then i used the following coomand to show attach shell to the container to run `whoami`
+
+```sh
+
+docker exec -it reactapp sh
+````
+
+## Outpot
+
+![SCR-20230224-2nw](https://user-images.githubusercontent.com/112965272/221066077-3250a214-645f-4676-a273-54b22a2cdcf0.png)
+
+
+i was able to implement 2 best practice to the dockerfile
       
 
 
