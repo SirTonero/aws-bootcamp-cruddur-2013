@@ -878,7 +878,20 @@ docker build -t frontend-react-js .
 ```
 
 the period is me telling the command to look at my current directory for the dockerfile
-<img width="906" alt="SCR-20230224-v8n" src="https://user-images.githubusercontent.com/112965272/221297067-26a8e73d-0049-49cf-a50d-79f7df2b1bb2.png">
+<img width="924" alt="SCR-20230224-vnn" src="https://user-images.githubusercontent.com/112965272/221299716-1e6bedbf-edbe-4b6d-86b9-04e49eb0700d.png">
+
+
+- then i ran the `RUN` command to run a container out of the frontend-react-js image 
+
+```sh
+docker run --name frontend-reactapp -dp 3000:3000 frontend-react-js
+```
+<img width="869" alt="image" src="https://user-images.githubusercontent.com/112965272/221303673-9a9254a2-87c1-416d-86fd-7d230d4b6d0c.png">
+
+## Output
+
+![SCR-20230224-wc2](https://user-images.githubusercontent.com/112965272/221304143-00906c72-b822-4640-b4e7-6fe02fb97382.png)
+
 
 
 
