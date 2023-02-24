@@ -848,7 +848,25 @@ and started the docker engine
 ```sh
 docker --version
 ```
--<img width="694" alt="SCR-20230224-tn8" src="https://user-images.githubusercontent.com/112965272/221283635-25196118-ad69-4e9b-a2b8-e56f9ef42fa1.png">
+<img width="694" alt="SCR-20230224-tn8" src="https://user-images.githubusercontent.com/112965272/221283635-25196118-ad69-4e9b-a2b8-e56f9ef42fa1.png">
+
+- i changed into my backend-flask folder and ran the `docker build` command  because my dockerfile is there and i typed
+
+```sh
+docker build -t backend-flask .
+```
+
+<img width="721" alt="SCR-20230224-uik" src="https://user-images.githubusercontent.com/112965272/221290885-d5a026c0-f594-4a36-b05b-28404d98a0b6.png">
+
+- then i ran the container from the created images.
+
+```sh
+docker run --name backend-flask -dp 4567:4567 backend-flask
+```
+<img width="879" alt="SCR-20230224-unt" src="https://user-images.githubusercontent.com/112965272/221291765-e24ebdbf-1764-4e1e-8e13-72cd0752a811.png">
+
+
+
 
 
 
