@@ -908,7 +908,7 @@ Having edited the three lines that needed to point to my local host, my applicat
 
 ## Pulling a docker images in an EC2 instance
 
-- login to aws mansgement console
+- login to aws managgement console
 - search for EC2 in the search 
 - while in ec2 i create an instance named docker-ec2
 - and i logged into the instance using EC2 instance connect
