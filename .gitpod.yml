@@ -20,6 +20,8 @@ tasks:
       pip3 install -r requirements.txt
       export BACKEND_URL="*"
       export FRONTEND_URL="*"
+      export ROLLBAR_ACCESS_TOKEN="6208c88df0334a8aafa5a2205e37d647"
+      gp env ROLLBAR_ACCESS_TOKEN="6208c88df0334a8aafa5a2205e37d647"
       cd /workspace/aws-bootcamp-cruddur-2023/frontend-react-js
       npm i
       cd /workspace/aws-bootcamp-cruddur-2023 
