@@ -12,6 +12,7 @@ article.recover-article {
   justify-content: flex-start;
   align-items: center;
   background: #8819f5;
+  color: white;
 }
 
 article.recover-article .recover-wrapper {
