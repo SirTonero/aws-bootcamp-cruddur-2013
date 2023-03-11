@@ -440,7 +440,8 @@ To view cognito in action lets sign up a new user and check our aws management c
 - Role based Access to manage how much access to AWS Resources for the application being built
 - Token Lifecycle Management - Issue new tokens, revoke compromised tokens, where to store (client/server) etc.
 - Access Token Scope - should be limited
-- 
+- JWT Token best practice - no sensitive info
+- Security tests of the application through penetration testing,
 
 
 
