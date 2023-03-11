@@ -426,6 +426,13 @@ cors = CORS(
 )
 ```
 
+To view cognito in action lets sign up a new user and check our aws management console.
+
+![SCR-20230311-ni4](https://user-images.githubusercontent.com/112965272/224494748-b3ff0fda-b636-4d92-9639-a3ea01cd091a.png)
+
+![SCR-20230311-nkn](https://user-images.githubusercontent.com/112965272/224494767-75ed4084-54f9-41bb-a44d-3a31755013c1.png)
+
+
 
 
 
