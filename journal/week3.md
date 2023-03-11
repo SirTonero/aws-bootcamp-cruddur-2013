@@ -432,6 +432,8 @@ To view cognito in action lets sign up a new user and check our aws management c
 
 ![SCR-20230311-nkn](https://user-images.githubusercontent.com/112965272/224494767-75ed4084-54f9-41bb-a44d-3a31755013c1.png)
 
+<img width="1457" alt="SCR-20230311-nqb" src="https://user-images.githubusercontent.com/112965272/224495048-d2d73daa-6811-4d5d-a57e-7fa02801ffb7.png">
+
 
 
 
