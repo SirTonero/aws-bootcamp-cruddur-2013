@@ -51,6 +51,44 @@ To create a userpool in aws we will be using the AWS MAnagement Console
 ### cruddur Userpool ID 
 <img width="1437" alt="SCR-20230311-atk" src="https://user-images.githubusercontent.com/112965272/224469910-bc608af2-51ae-467d-b704-7690f341fb58.png">
 
+### configuring AWS Amplify
+we will be hooking up our cognito pool to our `App.js` 
+
+to hook cognito pool we need to import aws amplify using the import statement below.
+
+```javascript
+import { Amplify } from 'aws-amplify';
+```
+to configure amplify, we need to set the following ENV in our code as well as our dockerfile
+
+- AWS_PROJECT_REGION
+- aws_cognito_identity_pool_id
+- aws_cognito_region
+- aws_user_pools_id
+- aws_user_pools_web_client_id
+
+The `App.js` would be like this 👇
+
+```javascript
+import { Amplify } from 'aws-amplify';
+
+Amplify.configure({
+  "AWS_PROJECT_REGION": process.env.REACT_AWS_PROJECT_REGION,
+  "aws_cognito_identity_pool_id": process.env.REACT_APP_AWS_COGNITO_IDENTITY_POOL_ID,
+  "aws_cognito_region": process.env.REACT_APP_AWS_COGNITO_REGION,
+  "aws_user_pools_id": process.env.REACT_APP_AWS_USER_POOLS_ID,
+  "aws_user_pools_web_client_id": process.env.REACT_APP_CLIENT_ID,
+  "oauth": {},
+  Auth: {
+    // We are not using an Identity Pool
+    // identityPoolId: process.env.REACT_APP_IDENTITY_POOL_ID, // REQUIRED - Amazon Cognito Identity Pool ID
+    region: process.env.REACT_AWS_PROJECT_REGION,           // REQUIRED - Amazon Cognito Region
+    userPoolId: process.env.REACT_APP_AWS_USER_POOLS_ID,         // OPTIONAL - Amazon Cognito User Pool ID
+    userPoolWebClientId: process.env.REACT_APP_AWS_USER_POOLS_WEB_CLIENT_ID,   // OPTIONAL - Amazon Cognito Web Client ID (26-char alphanumeric string)
+  }
+});
+
+```
 
 
 
