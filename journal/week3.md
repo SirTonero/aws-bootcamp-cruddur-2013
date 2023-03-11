@@ -40,5 +40,14 @@ To create a userpool in aws we will be using the AWS MAnagement Console
 
 <img width="1431" alt="SCR-20230311-a6g" src="https://user-images.githubusercontent.com/112965272/224468703-34fd82a8-da56-4567-9bf4-2521b0551b95.png">
 
+<img width="1387" alt="SCR-20230311-962" src="https://user-images.githubusercontent.com/112965272/224469043-1c9a8932-404e-4085-a5bd-514e9b8e3639.png">
+<img width="1419" alt="SCR-20230311-9am" src="https://user-images.githubusercontent.com/112965272/224469065-f5dcceb1-cddd-433e-9014-7ce30faea6b8.png">
+
+<img width="1411" alt="SCR-20230311-9q2" src="https://user-images.githubusercontent.com/112965272/224469125-c60f7dc0-a0e7-4644-b32f-0f359aa77fa5.png">
+
+<img width="1420" alt="SCR-20230311-9wm" src="https://user-images.githubusercontent.com/112965272/224469173-cb51bcce-cb13-436b-acc4-7e2563fd7fd9.png">
+<img width="1420" alt="SCR-20230311-and" src="https://user-images.githubusercontent.com/112965272/224469490-388babbd-ce1f-478d-b360-f9af8edf2f66.png">
+
+
 
 
