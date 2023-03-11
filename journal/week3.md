@@ -434,6 +434,13 @@ To view cognito in action lets sign up a new user and check our aws management c
 
 <img width="1457" alt="SCR-20230311-nqb" src="https://user-images.githubusercontent.com/112965272/224495048-d2d73daa-6811-4d5d-a57e-7fa02801ffb7.png">
 
+### Amazon cognito Security Best Practices 
+
+- AWS User Access Lifecycle Management - Change of Roles/ Revoke role etc.
+- Role based Access to manage how much access to AWS Resources for the application being built
+- Token Lifecycle Management - Issue new tokens, revoke compromised tokens, where to store (client/server) etc.
+- Access Token Scope - should be limited
+- 
 
 
 
