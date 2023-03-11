@@ -133,6 +133,13 @@ React.useEffect(()=>{
 }, [])
 ```
 
+let us pass users to the following components:
+
+```javascript
+<DesktopNavigation user={user} active={'home'} setPopped={setPopped} />
+<DesktopSidebar user={user} />
+```
+
 
 
 
