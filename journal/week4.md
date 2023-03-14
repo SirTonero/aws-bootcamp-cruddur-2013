@@ -179,6 +179,12 @@ fi
 
 psql $URL
 ```
+
+To execute the script:
+
+```bash
+
+
 `The condition statement in this bash script will be used to toggle between production and dev database foe connection using the example below`
 #### PROD connection
 ```bash
