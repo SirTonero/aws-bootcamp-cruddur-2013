@@ -83,6 +83,8 @@ with a correct password are successfully authenticated into postgres.
 <img width="998" alt="SCR-20230314-v0d" src="https://user-images.githubusercontent.com/112965272/225138958-7cd256a2-0d34-4df3-a92e-2044590b46cb.png">
 
 next step --- we create a databse called cruddur inside postgres with the command below:
+https://www.postgresql.org/docs/current/app-createdb.html
+
 ```bash
 CREATE databse cruddur;
 ```
