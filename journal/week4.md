@@ -88,4 +88,10 @@ CREATE databse cruddur;
 ```
 <img width="989" alt="SCR-20230314-v3x" src="https://user-images.githubusercontent.com/112965272/225139658-d997c740-43e2-400d-b471-0eac3e36ce95.png">
 
+to view the list of databases inside postgres
+```bash
+\l
+```
+<img width="876" alt="SCR-20230314-vb1" src="https://user-images.githubusercontent.com/112965272/225142633-835f7657-f04f-4033-9fb4-e7586adbdcba.png">
+
 
