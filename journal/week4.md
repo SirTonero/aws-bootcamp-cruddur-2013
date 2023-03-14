@@ -18,3 +18,8 @@ we first have to test that our aws cli is properly created by issue the command 
 aws sts get-caller-identity
 ```
 
+#### output
+
+<img width="911" alt="SCR-20230314-tkh" src="https://user-images.githubusercontent.com/112965272/225126857-df6fe8f3-9833-4003-b6ab-562cd95c79db.png">
+
+
