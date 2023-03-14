@@ -397,4 +397,40 @@ cd backend-flask
 ```
 
 
+We'll create a new bash script named `db-setup` in the `bin` folder.
+
+```bash
+#! /usr/bin/bash
+
+-e # stops if its fails at any point 
+CYAN='\033[1;36m'
+NO_COLOR='\033[0m'
+LABEL="db-setup"
+printf "${CYAN}== ${LABEL}${NO_COLOR}\n"
+
+bin_path="$(realpath .)/bin"
+
+
+source "$bin_path/db-drop"
+source "$bin_path/db-create"
+source "$bin_path/db-schema-load"
+source "$bin_path/db-seed"
+source "$bin_path/rds-update-sg-rule"
+```
+#### we'll make the db-setup script executable.
+
+we will do this by modifying the file permission.
+
+``` bash
+chmod u+x bin/db-setup
+```
+TO execute this script:
+
+```bash
+
+cd backend-flask
+
+./bin/db-setup
+```
+
 
