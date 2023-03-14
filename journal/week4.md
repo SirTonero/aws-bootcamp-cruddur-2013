@@ -115,4 +115,25 @@ SELECT column1, column2, ... FROM table_name WHERE condition; -- Select data fro
 INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...); -- Insert data into a table
 UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition; -- Update data in a table
 DELETE FROM table_name WHERE condition; -- Delete data from a table
+```
+### Creating Postgres Connection String
+To ease up the task of connecting our database we need to set the connection command as an environmental variable.
+
+the command to connectr to our already created cruddur database is :
+
+```bash
+postgresql://postgres:password@127.0.0.1:5432/cruddur
+```
+
+to set this as an environmental variable 👇
+```bash
+export CONNECTION_URL="postgresql://postgres:password@127.0.0.1:5432/cruddur"
+```
+
+now lets set this into the gitpod environment.
+
+```bash
+gp env CONNECTION_URL="postgresql://postgres:pssword@127.0.0.1:5433/cruddur"
+```
+
 
