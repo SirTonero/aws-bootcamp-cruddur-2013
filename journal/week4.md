@@ -135,5 +135,39 @@ now lets set this into the gitpod environment.
 ```bash
 gp env CONNECTION_URL="postgresql://postgres:pssword@127.0.0.1:5433/cruddur"
 ```
+### Shell Script to perform Database Operations
+
+For things we commonly need to do we can create a new directory called `bin`
+
+We'll create an new folder called `bin`to hold all our bash scripts.
+
+```bash
+mkdir /workspace/aws-bootcamp-cruddur-2023/backend-flask/bin
+```
+We'll create a new bash script named `db-connect` in the `bin` folder.
+
+```bash
+
+#! /usr/bin/bash 
+CYAN='\033[1;36m'
+NO_COLOR='\033[0m'
+LABEL="db-connect"
+printf "${CYAN}== ${LABEL}${NO_COLOR}\n"
+
+echo "db-connect"
+
+if [ "$1" = "prod" ]; then
+  echo "Running in production mode"
+  URL=$PROD_CONNECTION_URL
+else
+  echo "Running in development mode"
+  URL=$CONNECTION_URL
+fi
+
+
+psql $URL
+```
+
+
 
 
