@@ -56,5 +56,32 @@ when we login to the aws console we can see the rds database being started.
 
 <img width="1137" alt="SCR-20230314-tx7" src="https://user-images.githubusercontent.com/112965272/225130129-10e2d818-2dd8-4b82-9422-582608c19746.png">
 
+now that we have successfully created our postgres database in AWS RDS lets spin up our docker-compose file
+
+command:
+```bash
+docker compose -f "docker-compose.yml" up -d --build 
+
+```
+<img width="1078" alt="SCR-20230314-uq5" src="https://user-images.githubusercontent.com/112965272/225136472-cb7f0f71-7895-471c-bb5b-6bbafff05a37.png">
+
+<img width="1084" alt="SCR-20230314-us0" src="https://user-images.githubusercontent.com/112965272/225136897-d24a0fed-2f12-4077-bb0d-c7df564070e5.png">
+
+### Login into postgres database 
+
+to login to postgress we issue the following command 
+
+```bash
+psql -U postgres -h localhost
+```
+
+`-h is all --host ` which is needed to connect to postgre from a docker
+
+after issuing the command the terminal will prompt us to enter a password
+with a correct password are successfully authenticated into postgres.
+
+<img width="998" alt="SCR-20230314-v0d" src="https://user-images.githubusercontent.com/112965272/225138958-7cd256a2-0d34-4df3-a92e-2044590b46cb.png">
+
+
 
 
