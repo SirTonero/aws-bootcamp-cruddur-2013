@@ -17,3 +17,4 @@ we first have to test that our aws cli is properly created by issue the command 
 ```bash
 aws sts get-caller-identity
 ```
+
