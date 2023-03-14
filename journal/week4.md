@@ -182,9 +182,6 @@ psql $URL
 
 To execute the script:
 
-```bash
-
-
 `The condition statement in this bash script will be used to toggle between production and dev database foe connection using the example below`
 #### PROD connection
 ```bash
@@ -209,3 +206,107 @@ we will do this by modifying the file permission.
 ``` bash
 chmod u+x bin/db-connect
 ```
+We'll create a new bash script named `db-create` in the `bin` folder.
+```bash
+#! /usr/bin/bash 
+CYAN='\033[1;36m'
+NO_COLOR='\033[0m'
+LABEL="db-create"
+printf "${CYAN}== ${LABEL}${NO_COLOR}\n"
+
+
+echo "db-create"
+
+ NO_DB_CONNECTION_URL=$(sed 's/\/cruddur//g' <<<"$CONNECTION_URL")
+
+
+psql $NO_DB_CONNECTION_URL -c "create database cruddur;"
+```
+
+#### we'll make the db-create script executable.
+
+we will do this by modifying the file permission.
+
+``` bash
+chmod u+x bin/db-create
+```
+TO execute this script:
+
+```bash
+
+cd backend-flask
+
+./bin/db-create
+```
+We'll create a new bash script named `db-drop in the `bin` folder.
+```bash
+#! /usr/bin/bash 
+CYAN='\033[1;36m'
+NO_COLOR='\033[0m'
+LABEL="db-drop"
+printf "${CYAN}== ${LABEL}${NO_COLOR}\n"
+
+
+echo "db-drop"
+
+ NO_DB_CONNECTION_URL=$(sed 's/\/cruddur//g' <<<"$CONNECTION_URL")
+
+ psql $NO_DB_CONNECTION_URL -c "drop database cruddur;"
+````
+#### we'll make the db-drop script executable.
+
+we will do this by modifying the file permission.
+
+``` bash
+chmod u+x bin/db-drop
+```
+TO execute this script:
+
+```bash
+
+cd backend-flask
+
+./bin/db-drop
+```
+
+We'll create a new bash script named `db-schema-load in the `bin` folder.
+
+```bash
+#! /usr/bin/bash 
+CYAN='\033[1;36m'
+NO_COLOR='\033[0m'
+LABEL="db-schema-load"
+printf "${CYAN}== ${LABEL}${NO_COLOR}\n"
+
+
+echo "db-schema-load"
+
+schema_path=$(realpath .)/db/schema.sql
+echo $schema_path
+
+if [ "$1" = "prod" ]; then
+  echo "Running in production mode"
+  URL=$PROD_CONNECTION_URL
+else
+  echo "Running in development mode"
+  URL=$CONNECTION_URL
+fi
+
+psql $URL cruddur < $schema_path
+```
+#### we'll make the db-schema-load script executable.
+
+we will do this by modifying the file permission.
+
+``` bash
+chmod u+x bin/db-schema-load
+```
+TO execute this script:
+
+```bash
+
+cd backend-flask
+
+./bin/db-schema-load
+
+
