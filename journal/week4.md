@@ -185,6 +185,21 @@ psql $URL
 cd backend-flask
 
 ./bin/db-connect prod
+```
 
+#### DEV Connection
 
+```bash
 
+cd backend-flask
+
+./bin/db-connect
+```
+
+#### we'll make the db-connect script executable.
+
+we will do this by modifying the file permission.
+
+``` bash
+chmod u+x bin/db-connect
+```
