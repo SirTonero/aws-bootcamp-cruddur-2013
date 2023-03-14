@@ -269,7 +269,7 @@ cd backend-flask
 ./bin/db-drop
 ```
 
-We'll create a new bash script named `db-schema-load in the `bin` folder.
+We'll create a new bash script named `db-schema-load` in the `bin` folder.
 
 ```bash
 #! /usr/bin/bash 
@@ -308,5 +308,93 @@ TO execute this script:
 cd backend-flask
 
 ./bin/db-schema-load
+```
+
+
+We'll create a new bash script named `db-seed` in the `bin` folder.
+
+```bash
+#! /usr/bin/bash 
+
+CYAN='\033[1;36m'
+NO_COLOR='\033[0m'
+LABEL="db-seed"
+printf "${CYAN}== ${LABEL}${NO_COLOR}\n"
+
+
+echo "db-seed"
+
+seed_path=$(realpath .)/db/seed.sql
+echo $seed_path
+
+if [ "$1" = "prod" ]; then
+  echo "Running in production mode"
+  URL=$PROD_CONNECTION_URL
+else
+  echo "Running in development mode"
+  URL=$CONNECTION_URL
+fi
+
+psql $URL cruddur < $seed_path
+```
+#### we'll make the db-seed script executable.
+
+we will do this by modifying the file permission.
+
+``` bash
+chmod u+x bin/db-seed
+```
+TO execute this script:
+
+```bash
+
+cd backend-flask
+
+./bin/db-seed
+```
+
+We'll create a new bash script named `db-session` in the `bin` folder.
+
+```bash
+#! /usr/bin/bash
+
+CYAN='\033[1;36m'
+NO_COLOR='\033[0m'
+LABEL="db-session"
+printf "${CYAN}== ${LABEL}${NO_COLOR}\n"
+
+if [ "$1" = "prod" ]; then
+  echo "Running in production mode"
+  URL=$PROD_CONNECTION_URL
+else
+  echo "Running in development mode"
+  URL=$CONNECTION_URL
+fi
+
+NO_DB_URL=$(sed 's/\/cruddur//g' <<<"$CONNECTION_URL")
+psql $NO_DB_URL -c "select pid as process_id, \
+       usename as user,  \
+       datname as db, \
+       client_addr, \
+       application_name as app,\
+       state \
+from pg_stat_activity;"
+```
+#### we'll make the db-session script executable.
+
+we will do this by modifying the file permission.
+
+``` bash
+chmod u+x bin/db-session
+```
+TO execute this script:
+
+```bash
+
+cd backend-flask
+
+./bin/db-session
+```
+
 
 
