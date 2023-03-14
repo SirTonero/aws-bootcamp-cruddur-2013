@@ -119,7 +119,7 @@ DELETE FROM table_name WHERE condition; -- Delete data from a table
 ### Creating Postgres Connection String
 To ease up the task of connecting our database we need to set the connection command as an environmental variable.
 
-the command to connectr to our already created cruddur database is :
+the command to connect to our already created cruddur database is :
 
 ```bash
 postgresql://postgres:password@127.0.0.1:5432/cruddur
@@ -133,8 +133,20 @@ export CONNECTION_URL="postgresql://postgres:password@127.0.0.1:5432/cruddur"
 now lets set this into the gitpod environment.
 
 ```bash
-gp env CONNECTION_URL="postgresql://postgres:pssword@127.0.0.1:5433/cruddur"
+gp env CONNECTION_URL="postgresql://postgres:pssword@127.0.0.1:5433/cruddur
 ```
+lets set the production database which is rds environment variable
+
+```
+export PROD_CONNECTION_URL="PROD_CONNECTION_URL=postgresql://<aws rds endpoint address>:5432/cruddur"
+```
+now lets set this into the gitpod environment.
+```bash
+gp env PROD_CONNECTION_URL="PROD_CONNECTION_URL=postgresql://<aws rds endpoint address>:5432/cruddur"
+```
+
+
+
 ### Shell Script to perform Database Operations
 
 For things we commonly need to do we can create a new directory called `bin`
@@ -167,7 +179,12 @@ fi
 
 psql $URL
 ```
+`The condition statement in this bash script will be used to toggle between production and dev database foe connection using the example below`
+#### PROD connection
+```bash
+cd backend-flask
 
+./bin/db-connect prod
 
 
 
