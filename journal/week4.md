@@ -547,6 +547,69 @@ lets set the gitpod ip command as an env variable.
 ```bash
 GITPOD_IP=$(curl ifconfig.me)
 ```
+> Gitpod workspaces are ephemeral and only live for as long as you work on a task.
+> Gitpod workspaces IP addresses are also ephemeral i.e it changes each time an enviroment is spinned off.
+
+so we have to create a script that  update the allowed ip with the new ip in our gitpod workspace in our postgres security group.
+
+
+We'll create an inbound rule for Postgres (5432) and provide the GITPOD ID.
+
+We'll get the security group rule id so we can easily modify it in the future from the terminal here in Gitpod.
+
+```sh
+export DB_SG_ID="sg-0b725ebab7e256345t"
+gp env DB_SG_ID="sg-0b725ebab7e256345t"
+export DB_SG_RULE_ID="sgr-070061bba456cfa88"
+gp env DB_SG_RULE_ID="sgr-070061bba456cfa88"
+```
+
+Whenever we need to update our security groups we can do this for access.
+
+```sh
+aws ec2 modify-security-group-rules \
+    --group-id $DB_SG_ID \
+    --security-group-rules "SecurityGroupRuleId=$DB_SG_RULE_ID,SecurityGroupRule={IpProtocol=tcp,FromPort=5432,ToPort=5432,CidrIpv4=$GITPOD_IP/32}"
+```
+
+https://docs.aws.amazon.com/cli/latest/reference/ec2/modify-security-group-rules.html#examples
+
+lets turn this script `aws ec2 modify-security-group-rule` to bash script.
+
+We'll create a new bash script named `rds-update-sg-rule` in the `bin` folder.
+```bash
+#! /usr/bin/bash
+
+CYAN='\033[1;36m'
+NO_COLOR='\033[0m'
+LABEL="rds-update-sg-rule"
+printf "${CYAN}== ${LABEL}${NO_COLOR}\n"
+
+echo "rds-update-sg-rule"
+
+aws ec2 modify-security-group-rules \
+    --group-id $DB_SG_ID \
+    --security-group-rules "SecurityGroupRuleId=$DB_SG_RULE_ID,SecurityGroupRule={Description=GITPOD,IpProtocol=tcp,FromPort=5432,ToPort=5432,CidrIpv4=$GITPOD_IP/32}"
+````
+#### we'll make the `rds-update-sg-rule` script executable.
+
+we will do this by modifying the file permission.
+
+``` bash
+chmod u+x bin/rds-update-sg-rule
+```
+TO execute this script:
+
+```bash
+
+cd backend-flask
+
+./bin/rds-update-sg-rule
+```
+
+
+
+
 
 
 
