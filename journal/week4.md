@@ -48,6 +48,8 @@ aws rds create-db-instance \
   --no-deletion-protection
   ```
   
+  
+  
   #### Output
   
   <img width="713" alt="SCR-20230314-tud" src="https://user-images.githubusercontent.com/112965272/225129967-ba152367-325b-4029-a02a-8b50e1aa828c.png">
@@ -526,8 +528,9 @@ from lib.db import pool, query_wrap_array
     print(json[0])
     return json[0]
     return results
-    ```
-
+    
+ ```
+ > This will take about 10-15 mins
 
  
  
