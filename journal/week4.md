@@ -47,7 +47,7 @@ aws rds create-db-instance \
   --performance-insights-retention-period 7 \
   --no-deletion-protection
   ```
-  
+   > This will take about 10-15 mins to get started.
   
   
   #### Output
@@ -530,7 +530,7 @@ from lib.db import pool, query_wrap_array
     return results
     
  ```
- > This will take about 10-15 mins
+
 
  
  
