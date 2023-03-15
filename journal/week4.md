@@ -48,6 +48,7 @@ aws rds create-db-instance \
   --no-deletion-protection
   ```
    > This will take about 10-15 mins to get started.
+   > We can temporarily stop an RDS instance for 4 days when we aren't using it.
   
   
   #### Output
@@ -530,6 +531,25 @@ from lib.db import pool, query_wrap_array
     return results
     
  ```
+ 
+ ## Connect to RDS via Gitpod
+ In order to connect to the RDS instance we need to provide our Gitpod IP and whitelist for inbound traffic on port 5432 in our AWS Management console.
+ 
+ to get our gitpod ip address 
+ 
+ ```bash
+ curl ifconfig.me
+ ```
+ <img width="723" alt="SCR-20230315-wwg" src="https://user-images.githubusercontent.com/112965272/225459654-aeb5b3b6-a934-4c38-8dea-18a0e279ea51.png">
+
+lets set the gitpod ip command as an env variable.
+
+```bash
+GITPOD_IP=$(curl ifconfig.me)
+```
+
+
+
 
 
  
