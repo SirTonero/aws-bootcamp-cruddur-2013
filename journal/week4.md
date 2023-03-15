@@ -424,7 +424,7 @@ we will do this by modifying the file permission.
 ``` bash
 chmod u+x bin/db-setup
 ```
-TO execute this script:
+To execute this script:
 
 ```bash
 
@@ -432,5 +432,67 @@ cd backend-flask
 
 ./bin/db-setup
 ```
+## Hooking Postgres to the Backend Flask Python Application
+---------
+we need to set the env var for our backend-flask application in our dockerfile
+```yml
+  backend-flask:
+    environment:
+      CONNECTION_URL: "${CONNECTION_URL}"
+```
+
+
+To plug the postgres to the flask application we need to install the postgres drivers to our backend-flask folder
+
+we'll be adding the following to our `requirements.txt`
+https://www.psycopg.org/psycopg3/
+
+```bash
+ psycopg[binary]
+ psycopg[pool]
+ ```
+ 
+ we would install the postgres driver using our `pip` command
+ 
+ ```bash 
+ cd backend-flask
+ 
+ pip install -r requirements.txt
+ ```
+ 
+ ### DB Object and Connection Pool
+ 
+lets create a file named `db.py` in the `lib` file and import the following code.
+
+`lin/db.py`
+
+```python
+from psycopg_pool import ConnectionPool
+import os
+
+def query_wrap_object(template):
+  sql = f"""
+  (SELECT COALESCE(row_to_json(object_row),'{{}}'::json) FROM (
+  {template}
+  ) object_row);
+  """
+  return sql
+
+def query_wrap_array(template):
+  sql = f"""
+  (SELECT COALESCE(array_to_json(array_agg(row_to_json(array_row))),'[]'::json) FROM (
+  {template}
+  ) array_row);
+  """
+  return sql
+
+connection_url = os.getenv("CONNECTION_URL")
+pool = ConnectionPool(connection_url)
+```
+ 
+ 
+
+
+
 
 
