@@ -460,7 +460,7 @@ https://www.psycopg.org/psycopg3/
  pip install -r requirements.txt
  ```
  
- ### DB Object and Connection Pool
+ ## DB Object and Connection Pool
  
 lets create a file named `db.py` in the `lib` file and import the following code.
 
@@ -489,6 +489,8 @@ def query_wrap_array(template):
 connection_url = os.getenv("CONNECTION_URL")
 pool = ConnectionPool(connection_url)
 ```
+
+
  
  
 
