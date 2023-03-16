@@ -607,6 +607,7 @@ cd backend-flask
 ./bin/rds-update-sg-rule
 ```
 
+<img width="989" alt="SCR-20230316-1lf" src="https://user-images.githubusercontent.com/112965272/225475261-73ea4731-2ccc-45aa-808f-86dba824a429.png">
 
 
 
