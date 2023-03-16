@@ -609,6 +609,34 @@ cd backend-flask
 
 <img width="989" alt="SCR-20230316-1lf" src="https://user-images.githubusercontent.com/112965272/225475261-73ea4731-2ccc-45aa-808f-86dba824a429.png">
 
+## Update Gitpod yaml file with the command to get gitpod ip as an env variable.
+
+```yaml
+    command: |
+      export GITPOD_IP=$(curl ifconfig.me)
+      source "$THEIA_WORKSPACE_ROOT/backend-flask/db-update-sg-rule"
+```
+
+## Test remote access
+
+We'll create a connection url:
+
+```
+postgresql://root:huEE33z2Qvl383@cruddur-db-instance.czz1cuvepklc.ca-central-1.rds.amazonaws.com:5433/cruddur
+```
+
+We'll test that it works in Gitpod:
+
+```sh
+postgresql://cruddurroot:dbPassword123@cruddur-db-instance.c42hhpqlj9jr.us-east-1.rds.amazonaws.com:5432/cruddur
+```
+
+We'll update your URL for production use case
+
+```sh
+export PROD_CONNECTION_URL=
+gp env PROD_CONNECTION_URL=
+```
 
 
 
