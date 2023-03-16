@@ -622,20 +622,20 @@ cd backend-flask
 We'll create a connection url:
 
 ```
-postgresql://root:huEE33z2Qvl383@cruddur-db-instance.czz1cuvepklc.ca-central-1.rds.amazonaws.com:5433/cruddur
+ postgresql://cruddurroot:<DB password>@cruddur-db-instance.c42hhpqlj9jr.us-east-1.rds.amazonaws.com:5432/cruddur
 ```
 
 We'll test that it works in Gitpod:
 
 ```sh
-postgresql://cruddurroot:dbPassword123@cruddur-db-instance.c42hhpqlj9jr.us-east-1.rds.amazonaws.com:5432/cruddur
+psql postgresql://cruddurroot:<DB password>@cruddur-db-instance.c42hhpqlj9jr.us-east-1.rds.amazonaws.com:5432/cruddur
 ```
 
 We'll update your URL for production use case
 
 ```sh
-export PROD_CONNECTION_URL=
-gp env PROD_CONNECTION_URL=
+export PROD_CONNECTION_URL="postgresql://cruddurroot:<DB password>@cruddur-db-instance.c42hhpqlj9jr.us-east-1.rds.amazonaws.com:5432/cruddur"
+gp env PROD_CONNECTION_URL="postgresql://cruddurroot:<DB password>@cruddur-db-instance.c42hhpqlj9jr.us-east-1.rds.amazonaws.com:5432/cruddur"
 ```
 
 
