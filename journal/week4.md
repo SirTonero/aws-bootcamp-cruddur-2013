@@ -638,6 +638,19 @@ export PROD_CONNECTION_URL="postgresql://cruddurroot:<DB password>@cruddur-db-in
 gp env PROD_CONNECTION_URL="postgresql://cruddurroot:<DB password>@cruddur-db-instance.c42hhpqlj9jr.us-east-1.rds.amazonaws.com:5432/cruddur"
 ```
 
+to connect to the productionn database, we would pass the PROD_CONNECTION_URL TO psql 
+```bash
+psql $PROD_CONNECTION_URL
+```
+
+
+
+
+To connect to our rds database which is production we can use the `db-connect` bash script and add `prod` to it 
+
+```bash
+source bin/db-connect prod
+```<img width="995" alt="SCR-20230316-293" src="https://user-images.githubusercontent.com/112965272/225479569-4efb2190-789a-4fae-8de3-271df3a67877.png">
 
 
 
