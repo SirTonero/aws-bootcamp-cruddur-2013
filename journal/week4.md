@@ -650,7 +650,8 @@ To connect to our rds database which is production we can use the `db-connect` b
 
 ```bash
 source bin/db-connect prod
-```<img width="995" alt="SCR-20230316-293" src="https://user-images.githubusercontent.com/112965272/225479569-4efb2190-789a-4fae-8de3-271df3a67877.png">
+```
+<img width="995" alt="SCR-20230316-293" src="https://user-images.githubusercontent.com/112965272/225479569-4efb2190-789a-4fae-8de3-271df3a67877.png">
 
 
 
