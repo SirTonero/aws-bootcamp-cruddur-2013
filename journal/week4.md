@@ -729,6 +729,11 @@ def lambda_handler(event, context):
 <img width="1420" alt="SCR-20230321-vk5" src="https://user-images.githubusercontent.com/112965272/226748338-6d87e16a-7a02-4baf-a7d7-7de96eeb3949.png">
 
 
+- we need to create a trigger for our lambda function from cognito
+
+<img width="1407" alt="SCR-20230321-vrn" src="https://user-images.githubusercontent.com/112965272/226750048-57f1c445-7ba4-48e9-9812-dd067823aa95.png">
+
+
 
 
 
