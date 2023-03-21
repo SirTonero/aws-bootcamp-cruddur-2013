@@ -766,7 +766,7 @@ SELECT * FROM users;
 
 ## Creating user Activities 
 
-we need to create a folder called `sql` and create another folder called `activities`.
+we need to create a folder called `sql` and create another folder called `activities` inside the `db` folder inside `backend-flask folder`.
 
 ### Importing the following  codes into the db.py file
 
@@ -895,7 +895,58 @@ class Db:
 db = Db()
 ```
 
+ in the sql/activities we will be creating the following sql file.
  
+ - `Create.sql`
+ ```sql
+ INSERT INTO public.activities (
+  user_uuid,
+  message,
+  expires_at
+)
+VALUES (
+  (SELECT uuid 
+    FROM public.users 
+    WHERE users.handle = %(handle)s
+    LIMIT 1
+  ),
+  %(message)s,
+  %(expires_at)s
+) RETURNING uuid;
+```
+
+- `home.sql`
+```sql
+SELECT
+  activities.uuid,
+  users.display_name,
+  users.handle,
+  activities.message,
+  activities.replies_count,
+  activities.reposts_count,
+  activities.likes_count,
+  activities.reply_to_activity_uuid,
+  activities.expires_at,
+  activities.created_at
+FROM public.activities
+LEFT JOIN public.users ON users.uuid = activities.user_uuid
+ORDER BY activities.created_at DESC
+```
+
+- `object.sql`
+```sql
+SELECT
+  activities.uuid,
+  users.display_name,
+  users.handle,
+  activities.message,
+  activities.created_at,
+  activities.expires_at
+FROM public.activities
+INNER JOIN public.users ON users.uuid = activities.user_uuid 
+WHERE 
+  activities.uuid = %(uuid)s
+```
  
 
 
