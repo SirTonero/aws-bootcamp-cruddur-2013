@@ -749,6 +749,20 @@ source bin/db-connect prod
 ```
 passing the prod is instructing the script to connect to the rds database.
 
+![SCR-20230321-w90](https://user-images.githubusercontent.com/112965272/226754157-abed29ab-6121-41a7-acf4-d5b2d1d7ff32.png)
+
+The following script helps to arrange our result.
+
+```sql
+\x auto
+```
+
+```sql
+SELECT * FROM users;
+```
+
+![SCR-20230321-weo](https://user-images.githubusercontent.com/112965272/226755096-b0445244-714f-4f73-baed-f7e0ffef5f98.png)
+
 
 
 
