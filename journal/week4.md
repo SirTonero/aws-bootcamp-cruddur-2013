@@ -654,6 +654,18 @@ source bin/db-connect prod
 <img width="995" alt="SCR-20230316-293" src="https://user-images.githubusercontent.com/112965272/225479569-4efb2190-789a-4fae-8de3-271df3a67877.png">
 
 
+## Setup Cognito Post Confirmation Lambda
+
+### Create the handle function
+
+- Create lambda in same vpc as rds instance python 3.8
+- Add a layer for psycopg2 with one of the below methods for development or production.
+
+### lets create our lambda and add the post confirmation.
+
+- login to amazon management console
+<img width="1251" alt="SCR-20230321-unn" src="https://user-images.githubusercontent.com/112965272/226740691-b035abea-9b6d-48d5-967b-74bcb28d3702.png">
+<img width="1442" alt="SCR-20230321-uqa" src="https://user-images.githubusercontent.com/112965272/226741440-88e0a9c6-86a8-40e7-80c5-3ddf5a7df105.png">
 
 
 
