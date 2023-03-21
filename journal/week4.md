@@ -728,6 +728,29 @@ def lambda_handler(event, context):
 
 <img width="1420" alt="SCR-20230321-vk5" src="https://user-images.githubusercontent.com/112965272/226748338-6d87e16a-7a02-4baf-a7d7-7de96eeb3949.png">
 
+we need to add the following permision and policy to our lambda execution role.
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:CreateNetworkInterface",
+                "ec2:DeleteNetworkInterface",
+                "ec2:DescribeInstances",
+                "ec2:AttachNetworkInterface",
+                "ec2:DescribeNetworkInterfaces"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+````
+we need to add a lambda psycopg layer to our lambda function
+<img width="1388" alt="SCR-20230322-29" src="https://user-images.githubusercontent.com/112965272/226761095-f53e9c9f-09ea-4faa-8aa1-525b4c8538b1.png">
+
 
 - we need to create a trigger for our lambda function from cognito
 
