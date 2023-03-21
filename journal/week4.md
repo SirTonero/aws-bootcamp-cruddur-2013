@@ -719,6 +719,14 @@ def lambda_handler(event, context):
 
 <img width="1394" alt="SCR-20230321-v7v" src="https://user-images.githubusercontent.com/112965272/226745266-b474ec94-4b51-43f6-bcd1-e9cb2f25efb3.png">
 
+- click on configuration and click on environmental variables.
+- set the production connection url to enable the lambda function connect and the newly created user to the database
+
+<img width="1427" alt="SCR-20230321-vd8" src="https://user-images.githubusercontent.com/112965272/226747031-89378740-dc52-4e4f-84bd-47f54e5a4906.png">
+
+- we need to set the vpc for our lambda  as well as the security group to allow our lambda connection to our RDS database.
+
+<img width="1420" alt="SCR-20230321-vk5" src="https://user-images.githubusercontent.com/112965272/226748338-6d87e16a-7a02-4baf-a7d7-7de96eeb3949.png">
 
 
 
