@@ -735,6 +735,22 @@ def lambda_handler(event, context):
 
 
 
+To test our cruddur app we create a new account in cruddur
+<img width="817" alt="SCR-20230321-vv0" src="https://user-images.githubusercontent.com/112965272/226751270-c5964ca8-44d9-4398-8aba-49af1b22c48d.png">
+
+- After creating our new user we need to check our proudction database to check if the lambda function passed the user to the db.
+
+```bash
+cd backend-flask
+```
+
+```bash
+source bin/db-connect prod
+```
+passing the prod is instructing the script to connect to the rds database.
+
+
+
 
 
  
