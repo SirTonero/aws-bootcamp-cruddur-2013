@@ -110,6 +110,7 @@ class Db:
     # get the line number when exception occured
     line_num = traceback.tb_lineno
 
+
     # print the connect() error
     print ("\npsycopg ERROR:", err, "on line number:", line_num)
     print ("psycopg traceback:", traceback, "-- type:", err_type)
