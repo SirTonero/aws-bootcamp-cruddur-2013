@@ -4,7 +4,7 @@ from lib.db import db
 
 
 class Messages:
-    def run(message_group_uuid, cognito_user_id):
+    def run(message_group_uuid,cognito_user_id):
         model = {
             'errors': None,
             'data': None
