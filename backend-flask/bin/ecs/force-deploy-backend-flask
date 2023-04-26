@@ -1,0 +1,5 @@
+#! /usr/bin/bash
+
+
+
+aws ecs update-service --cluster cruddur --service backend-flask --force-new-deployment
