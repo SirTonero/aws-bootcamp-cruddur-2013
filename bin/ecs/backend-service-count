@@ -1,0 +1,19 @@
+#! /usr/bin/bash
+
+CYAN='\033[1;36m'
+NO_COLOR='\033[0m'
+LABEL="ecs-service-state"
+printf "${CYAN}== ${LABEL}${NO_COLOR}\n"
+
+if [ "$1" = "1" ]; then
+  echo "increasing backend service count by 1"
+  aws ecs update-service --cluster cruddur --service backend-flask --desired-count 1
+
+else
+  aws ecs update-service --cluster cruddur --service backend-flask --desired-count 0
+
+fi
+
+
+
+
