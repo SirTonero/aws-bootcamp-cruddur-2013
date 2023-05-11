@@ -1,0 +1,37 @@
+{
+    "TableDescription": {
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "pk",
+                "AttributeType": "S"
+            },
+            {
+                "AttributeName": "sk",
+                "AttributeType": "S"
+            }
+        ],
+        "TableName": "cruddur-messages",
+        "KeySchema": [
+            {
+                "AttributeName": "pk",
+                "KeyType": "HASH"
+            },
+            {
+                "AttributeName": "sk",
+                "KeyType": "RANGE"
+            }
+        ],
+        "TableStatus": "ACTIVE",
+        "CreationDateTime": "2023-04-08T16:29:21.894000+00:00",
+        "ProvisionedThroughput": {
+            "LastIncreaseDateTime": "1970-01-01T00:00:00+00:00",
+            "LastDecreaseDateTime": "1970-01-01T00:00:00+00:00",
+            "NumberOfDecreasesToday": 0,
+            "ReadCapacityUnits": 5,
+            "WriteCapacityUnits": 5
+        },
+        "TableSizeBytes": 85556,
+        "ItemCount": 219,
+        "TableArn": "arn:aws:dynamodb:ddblocal:000000000000:table/cruddur-messages"
+    }
+}
