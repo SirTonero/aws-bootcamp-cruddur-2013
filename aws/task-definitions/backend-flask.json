@@ -13,7 +13,7 @@
         "name": "xray",
         "image": "public.ecr.aws/xray/aws-xray-daemon",
         "essential": true,
-        "user": 1337,
+        "user": "1337",
         "portMappings": [
           {
             "name": "xray",
